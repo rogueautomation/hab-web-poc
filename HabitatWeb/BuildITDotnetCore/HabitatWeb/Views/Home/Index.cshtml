@@ -1,0 +1,51 @@
+﻿@model IEnumerable<HabitatWeb.Models.Stock>
+
+@{
+    ViewData["Title"] = "Stocks";
+}
+
+<h1>Stocks</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.stockMarket)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.stockName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.stockSymbol)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.price)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.stockMarket)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.stockName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.stockSymbol)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.price)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
